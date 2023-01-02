@@ -14,11 +14,19 @@ public class Page {
         return driver.getTitle();
     }
 
+    public String getUrl(){
+        return driver.getCurrentUrl();
+    }
+
     public By byCss(String cssSelector){
         return By.cssSelector(cssSelector);
     }
 
     public boolean isDisplayed(By locator){
         return driver.findElement(locator).isDisplayed();
+    }
+
+    public void click(By locator){
+        driver.findElement(locator).click();
     }
 }
