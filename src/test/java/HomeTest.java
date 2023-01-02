@@ -10,6 +10,8 @@ public class HomeTest extends BaseTest{
 
     @Test
     public void verifyLogo(){
-        Assert.assertTrue(homePage.isLogoDisplayed());
+        if (homePage.isLogoDisplayed()) homePage.redirectToHome();
+        String expectedUrl = "https://www.amazon.com/ref=nav_logo";
+        Assert.assertEquals(homePage.getUrl(), expectedUrl);
     }
 }
