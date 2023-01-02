@@ -12,4 +12,8 @@ public class HomePage extends Page {
     public boolean isLogoDisplayed(){
         return isDisplayed(byCss(Home.logo));
     }
+
+    public void redirectToHome(){
+        click(byCss(Home.logo));
+    }
 }
