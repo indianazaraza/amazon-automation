@@ -1,5 +1,5 @@
 package locators;
 
 public class Home {
-    public static String logo = "#nav-logo-sprites";
+    public static String LOGO = "#nav-logo-sprites";
 }
