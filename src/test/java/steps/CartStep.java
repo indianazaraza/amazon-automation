@@ -1,27 +1,29 @@
 package steps;
 
+import base.BaseUtil;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+import pages.CartPage;
 import utils.Link;
 
-public class CartStepDefs {
-
-    BaseStepDefs stepData;
+public class CartStep extends BaseUtil {
+    private BaseUtil base;
+    private CartPage cartPage = new CartPage(base.driver);
 
     @Given("I am in the cart page")
     public void verifyUrlCartPage(){
-        Assert.assertEquals(stepData.cartPage.getUrl(), Link.CART);
+        Assert.assertEquals(cartPage.getUrl(), Link.CART);
     }
 
     @When("I click the logo")
     public void clickLogo(){
-        if (stepData.cartPage.isLogoDisplayed()) stepData.cartPage.redirectToHome();
+        if (cartPage.isLogoDisplayed()) cartPage.redirectToHome();
     }
 
     @Then("I should return to the home page")
     public void verifyUrlHomePage(){
-        Assert.assertEquals(stepData.cartPage.getUrl(), Link.HOME+"ref=nav_logo");
+        Assert.assertEquals(cartPage.getUrl(), Link.HOME+"-/es/ref=nav_logo");
     }
 }
