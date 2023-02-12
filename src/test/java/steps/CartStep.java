@@ -9,8 +9,7 @@ import pages.CartPage;
 import utils.Link;
 
 public class CartStep extends BaseUtil {
-    private BaseUtil base;
-    private CartPage cartPage = new CartPage(base.driver);
+    private CartPage cartPage = new CartPage(driver);
 
     @Given("I am in the cart page")
     public void verifyUrlCartPage(){
