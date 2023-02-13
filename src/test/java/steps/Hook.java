@@ -20,14 +20,22 @@ public class Hook extends BaseUtil {
         System.setProperty("webdriver.chrome.driver", Path.chromeDriver);
         driver = new ChromeDriver();
         driver.get(Link.CART);
-        extent = new ExtentReports();
-        var spark = new ExtentSparkReporter("./"+Path.report);
-        extent.attachReporter(spark);
+        setReportConfig();
     }
 
     @After
     public void tearDown() throws IOException {
         driver.quit();
+        openReport();
+    }
+
+    private void setReportConfig(){
+        extent = new ExtentReports();
+        var spark = new ExtentSparkReporter("./"+Path.report);
+        extent.attachReporter(spark);
+    }
+
+    private void openReport() throws IOException {
         extent.flush();
         Desktop.getDesktop().browse(new File(Path.report).toURI());
     }
