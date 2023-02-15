@@ -37,6 +37,7 @@ public class Hook extends BaseUtil {
 
     private void openReport() throws IOException {
         extent.flush();
+        //opens automatically the report
         Desktop.getDesktop().browse(new File(Path.report).toURI());
     }
 }
