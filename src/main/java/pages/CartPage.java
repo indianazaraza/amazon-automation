@@ -1,6 +1,6 @@
 package pages;
 
-import locators.Home;
+import ui.Home;
 import org.openqa.selenium.WebDriver;
 
 public class CartPage extends Page{
