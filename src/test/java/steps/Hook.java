@@ -7,10 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import utils.Link;
 import utils.Path;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-
 public class Hook extends BaseUtil {
 
     @Before
@@ -21,13 +17,7 @@ public class Hook extends BaseUtil {
     }
 
     @After
-    public void tearDown() throws IOException {
+    public void tearDown() {
         driver.quit();
-        //openReport();
-    }
-
-    private void openReport() throws IOException {
-        //opens automatically the report
-        //Desktop.getDesktop().browse(new File(Path.report).toURI());
     }
 }
