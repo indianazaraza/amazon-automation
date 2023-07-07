@@ -4,6 +4,6 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features = "src/test/resources",
         glue = "steps",
         monochrome = true,
-        plugin = "pretty")
+        plugin = "json:cucumber_report/cucumber.json")
 public class RunnerTest extends AbstractTestNGCucumberTests {
 }
