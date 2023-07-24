@@ -1,9 +1,9 @@
 Feature: Logo
   As a user,
-  I want to return to the home page
+  I want to go to the home page from the cart page
   so that I can explore more sections
 
-  Scenario: Return to the home page
+  Scenario: Go to the home page
     Given I am in the cart page
-    When I click the logo
+    When I click on the logo
     Then I should return to the home page

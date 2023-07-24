@@ -16,7 +16,7 @@ public class CartStep extends BaseUtil {
         assertEquals(cartPage.getUrl(), Link.CART);
     }
 
-    @When("^I click the logo$")
+    @When("^I click on the logo$")
     public void clickLogo() {
         if (cartPage.isLogoDisplayed()) cartPage.redirectToHome();
     }
