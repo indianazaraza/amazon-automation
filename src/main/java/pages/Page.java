@@ -10,10 +10,6 @@ public class Page {
         this.driver = driver;
     }
 
-    public String getTitle(){
-        return driver.getTitle();
-    }
-
     public String getUrl(){
         return driver.getCurrentUrl();
     }
